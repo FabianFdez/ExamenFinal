@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateActivity">
+
+    <TextView
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Creacion de Potreros"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Potrero" />
+
+            <EditText
+                android:id="@+id/txt_PotreroName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="7"/>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha de Creacion"/>
+
+            <EditText
+                android:id="@+id/txt_fireDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="7"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:text="Area en m2:"/>
+
+            <EditText
+                android:id="@+id/txt_Area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="7"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="Foto" />
+
+            <ImageView
+                android:id="@+id/fireImageA"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="5dp"/>
+
+            <EditText
+                android:id="@+id/namePhoto"
+                android:layout_width="155dp"
+                android:layout_height="32dp"/>
+
+            <Button
+                android:id="@+id/btnTakePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginLeft="3dp"
+                android:text="Agregar" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewVideo"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="Video " />
+
+            <ImageView
+                android:id="@+id/video"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="5dp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/editTextVideo"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"/>
+
+
+            <Button
+                android:id="@+id/buttonVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="tomarVideo"
+                android:text="Agregar" />
+
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="380dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:onClick="savePotrero"
+        android:text="Guardar"
+        android:gravity="center"
+        android:textColor="@color/cardview_light_background" />
+
+    </LinearLayout>
+
+</LinearLayout>
