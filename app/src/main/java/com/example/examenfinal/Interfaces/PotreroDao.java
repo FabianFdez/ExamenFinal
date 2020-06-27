@@ -11,6 +11,9 @@ import java.util.List;
 
 @Dao
 public interface PotreroDao {
+
+    @Query("SELECT COUNT(*) FROM " + Potrero.TABLE_NAME)
+    int count(); //metodo
     //seleccionar todo
     @Query("SELECT * FROM "+ Potrero.TABLE_NAME)
     List<Potrero> getAll();

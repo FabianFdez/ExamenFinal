@@ -44,6 +44,11 @@ public class Potrero {
         this.video = video;
     }
 
+    public Potrero() {
+
+    }
+
+
     public static String getTableName() {
         return TABLE_NAME;
     }

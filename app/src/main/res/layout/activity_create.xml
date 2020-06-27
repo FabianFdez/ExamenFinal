@@ -52,7 +52,7 @@
                 android:text="Fecha de Creacion"/>
 
             <EditText
-                android:id="@+id/txt_fireDate"
+                android:id="@+id/txt_Date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="7"/>
@@ -76,8 +76,6 @@
                 android:ems="7"/>
 
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_marginTop="50dp"
             android:layout_width="match_parent"
@@ -90,7 +88,7 @@
                 android:text="Foto" />
 
             <ImageView
-                android:id="@+id/fireImageA"
+                android:id="@+id/ImageA"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginRight="5dp"/>
