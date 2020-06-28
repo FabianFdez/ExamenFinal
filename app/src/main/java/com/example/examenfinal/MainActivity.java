@@ -44,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        FloatingActionButton list = findViewById(R.id.listar);
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                Intent intent = new Intent(MainActivity.this, ListarPotreros.class);
+                startActivity(intent);
+            }
+        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

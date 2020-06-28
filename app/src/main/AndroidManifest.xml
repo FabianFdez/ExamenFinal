@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CreateActivity"></activity>
+        <activity android:name=".ListarPotreros"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
