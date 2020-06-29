@@ -40,8 +40,10 @@ public class CreateActivity extends AppCompatActivity {
     EditText nombre, fecha, area, video;
     EditText img;
     Button fotobtn, btnVideo;
-    ImageView imagenView, videoView;
-    String nombreF, nombreV = "";
+    ImageView imagenView;
+    ImageView videoView;
+    String nombreF = " ";
+    String nombreV = " ";
     AppDatabase db;
     public static final  String CARPETA_PRINCIPAL = "MisImagenes";
     public static final String CARPETA_IMAGEN = "imagenes";
@@ -50,8 +52,8 @@ public class CreateActivity extends AppCompatActivity {
     public Uri uriPot;
     public Uri uriVideo;
     public static final int GALLERY = 40;
-    public  static  final int COD_FOTO = 20;
-    public  static  final int COD_VIDEO = 30;
+    public  static  final int COD_FOTO = 200;
+    public  static  final int COD_VIDEO = 300;
     public static final  String CARPETA_PRINCIPAL_VIDEO = "MisVideos";
     public static final String CARPETA_VIDEO = "videos";
     public static final String DIRECTORIO_VIDEO= CARPETA_PRINCIPAL_VIDEO + CARPETA_VIDEO;
@@ -143,7 +145,7 @@ public class CreateActivity extends AppCompatActivity {
                 Uri imageUri = FileProvider.getUriForFile(this, authorities,image);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
             }else {
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(miFile));
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(image));
             }
 
 
@@ -170,7 +172,7 @@ public class CreateActivity extends AppCompatActivity {
             Uri imageUri = FileProvider.getUriForFile(this, authoritie,video);
             intentVideo.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
         }else {
-            intentVideo.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(miFileV));
+            intentVideo.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(video));
         }
 
 
