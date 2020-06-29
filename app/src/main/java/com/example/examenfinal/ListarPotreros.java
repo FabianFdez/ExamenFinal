@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +35,9 @@ public class ListarPotreros extends AppCompatActivity {
         AdapterPotrero adapterPotrero = new AdapterPotrero(this);
         viewPotrero.setAdapter(adapterPotrero);
     }
-
+    public void delete(int pos) {
+        db.potreroDao().deleteById(pos);
+    }
     class AdapterPotrero extends ArrayAdapter<Potrero>{
         AppCompatActivity appCompatActivity;
 
@@ -50,7 +53,16 @@ public class ListarPotreros extends AppCompatActivity {
             TextView nombre = (TextView)item.findViewById(R.id.textPotrero);
             String dato = listpotreros.get(pos).getNombre()+" "+listpotreros.get(pos).getFecha()+" "+listpotreros.get(pos).getImg();
             nombre.setText(dato);
+            final Potrero potrero = listpotreros.get(pos);
 
+            nombre.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    Toast.makeText(ListarPotreros.this, "Borrando  "+potrero.getNombre(), Toast.LENGTH_LONG).show();
+                    delete((int) potrero.getId());
+                    return false;
+                }
+            });
             return item;
         }
 
