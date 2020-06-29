@@ -30,7 +30,7 @@ public class Potrero {
     public String fecha;
 
     @ColumnInfo(name = "foto")
-    public String img;
+    public String  img;
 
     @ColumnInfo(name = "video")
     public String video;

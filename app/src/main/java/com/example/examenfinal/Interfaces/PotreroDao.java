@@ -22,7 +22,7 @@ public interface PotreroDao {
 
     //eliminar
     @Query("DELETE FROM " + Potrero.TABLE_NAME + " WHERE " + Potrero.COLUMN_ID + " = :ide")
-    int deleteById(long ide);
+    int deleteById(int ide);
 
     //actualizar
     @Update

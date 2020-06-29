@@ -48,10 +48,15 @@ public class ListarPotreros extends AppCompatActivity {
             View item = inflater.inflate(R.layout.item_potrero, null);
 
             TextView nombre = (TextView)item.findViewById(R.id.textPotrero);
-            String dato = listpotreros.get(pos).getNombre()+" "+listpotreros.get(pos).getImg();
+            String dato = listpotreros.get(pos).getNombre()+" "+listpotreros.get(pos).getFecha()+" "+listpotreros.get(pos).getImg();
             nombre.setText(dato);
 
             return item;
         }
+
+        public Potrero getPosition(int pos) {
+            return listpotreros.get(pos);
+        }
     }
+
 }
